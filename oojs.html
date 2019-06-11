@@ -20,12 +20,18 @@
             this.gender = gender;
             this.interests = interests;
             this.bio = function() {
+              if (this.gender === 'male') {
               alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+              }
+              else {
+                alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. She likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+              }
             };
             this.greeting = function() {
               alert('Hi! I\'m ' + this.name.first + '.');
             };
           }
           var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+          var person2 = new Person('Sarah', 'Smith', 33, 'female', ['music', 'hiking']);
     </script>
 </html>
